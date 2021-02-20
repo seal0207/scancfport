@@ -1,5 +1,8 @@
 # scancfport
 一个用于扫描转发到cloudflare ip端的脚本
+
+好用请 点亮Star ！ 勿滥用，勿声张！~
+
 一键脚本：
 
 `wget https://raw.githubusercontent.com/seal0207/scancfport/main/scan.sh && chmod +x scan.sh && ./scan.sh`
