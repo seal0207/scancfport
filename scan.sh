@@ -19,9 +19,11 @@ export PATH
   " portstart
     read -p " 请输入需要扫描的结束端口：
   " portover
-    echo -e "正在扫描中···请耐心等待！~"
+    s=`expr $portover - $portstart`
     for ((i=$portstart;i<=$portover;i++))
     do
+    clear
+    echo -ne "正在扫描中···请耐心等待！~ 本次扫描端口数量为$s 已经扫描 $i 个端口"
     curl -s $ip:$i --connect-timeout 1 -m 1 | grep "400 The plain HTTP request was sent to HTTPS port" >> scan.txt
     echo "#$i" >> scan.txt
     done
